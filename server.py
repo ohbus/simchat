@@ -16,9 +16,10 @@ def chat_server():
  
     SOCKET_LIST.append(server_socket)
  
-    print ("Chat server started on port " + str(PORT))
+    print ("Chat server started on PORT " + str(PORT))
  
     while 1:
+        
         try:
             read_sockets,write_sockets,error_sockets = select.select(SOCKET_LIST,[],[],0)
         except:

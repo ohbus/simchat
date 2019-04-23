@@ -26,8 +26,11 @@ def client():
         sys.exit()
      
     print ('Connected to remote host. You can start sending messages. Ctrl+C to Exit.')
+    
     uname = input("Enter Your USERNAME: ")
-    sys.stdout.write('<%s> ' %uname); sys.stdout.flush()
+
+    sys.stdout.write('<%s> ' %uname); 
+    sys.stdout.flush()
     s.send(uname.encode()) 
     
     while 1:
