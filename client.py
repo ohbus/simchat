@@ -22,11 +22,11 @@ def client():
     try :
         s.connect((host, port))
     except :
-        print ('Unable to connect to the server\n Table number 26 pe jaayiye. xD')
+        print ('Unable to connect to the server\nTable number 26 pe jaayiye. xD')
         sys.exit()
      
     print ('Connected to remote host. You can start sending messages. Ctrl+C to Exit.')
-    
+
     uname = input("Enter Your USERNAME: ")
 
     sys.stdout.write('<%s> ' %uname); 
