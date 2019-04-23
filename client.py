@@ -9,7 +9,7 @@ def client():
     try:
         host = sys.argv[1]
     except:
-        host = 'client'
+        host = 'localhost'
 
     try:
         port = int(sys.argv[2])
