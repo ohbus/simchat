@@ -2,8 +2,9 @@ import sys, socket, select
  
 def client():
     if(len(sys.argv) < 3) :
-        print( 'Usage : python3 client.py [hostname] [port]')
-        print( 'Default : [hostname] = client, [port] = 36360')
+        print( 'How to use : python client.py [hostname] [port]')
+        print( 'You need to know the name of the host machine like if the server is on your machone it\'s localhost for my case it is xen')
+        print( 'Default : [hostname] = localhost , [port] = 36001')
 
     try:
         host = sys.argv[1]
@@ -13,7 +14,7 @@ def client():
     try:
         port = int(sys.argv[2])
     except:
-        port = 36360
+        port = 36001
     
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.settimeout(10)
@@ -38,7 +39,7 @@ def client():
 
         for sock in read_sockets:            
             if sock == s:
-                data = (sock.recv(36361))
+                data = (sock.recv(36002))
                 data = data.decode()
                 if not data :
                     print('\nDisconnected from chat server')

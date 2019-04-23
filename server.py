@@ -2,8 +2,8 @@ import sys, socket, select
 
 HOST = ''
 SOCKET_LIST = []
-RECV_BUFFER = 36361 
-PORT = 36360
+RECV_BUFFER = 36002 
+PORT = 36001
 
 def chat_server():
     
