@@ -3,7 +3,7 @@ import sys, socket, select
 def client():
     if(len(sys.argv) < 3) :
         print( 'How to use : python client.py [hostname] [port]')
-        print( 'You need to know the name of the host machine like if the server is on your machone it\'s localhost for my case it is xen')
+        print( 'hostname is the name of the server machine or you can also provide the IP address as well.')
         print( 'Default : [hostname] = localhost , [port] = 36001')
 
     try:
